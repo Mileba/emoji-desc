@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "./Card";
+import emojipedia from "../emojipedia";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
       </h1>
 
       <dl className="dictionary">
-        <Card />
+        <Card name={emojipedia[0].name} emoji={emojipedia[1].emoji} />
         <div className="term">
           <dt>
             <span className="emoji" role="img" aria-label="Tense Biceps">
@@ -37,6 +39,7 @@ function App() {
           </dd>
         </div>
       </dl>
+      <Footer />
     </div>
   );
 }
